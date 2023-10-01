@@ -1,0 +1,22 @@
+/* Estilo para las tarjetas */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: calc(100% / 3 - 20px); 
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-image {
+    max-width: 100px; /*Establece un ancho máximo para la imagen */
+    width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    height: auto;
+    float: left; /* Coloca la imagen a la izquierda*/
+    margin-right: 10px; /* Agrega un margen entre la imagen y el contenido */
+}

@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link type="text/css" href="{% static 'css/home/especialidades.css' %}" rel="stylesheet" />
+    <link type="text/css" href="{% static 'css/styles.css' %}" rel="stylesheet"> <!-- Enlace al archivo CSS separado -->
+    <title>MedicalSys</title>
+</head>
+{% include 'base/header.html' %}
+<div class="card-container">
+    {% for project in projects %}
+        <!-- Tarjeta del proyecto -->
+        <div class="card">
+            <img class="img-fluid card-image" src="{{project.image.url}}" alt="">
+            <div>
+                <h2 class="section-heading title">{{project.title}}</h2>
+                {% if project.link %}
+                    <p><a href="{{project.link}}">Más información</a></p>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+</html>
